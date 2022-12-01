@@ -20,10 +20,12 @@ use mysqli;
             $this->datos['pass'], $this->datos['db']);
         }
 
+        //CONSULTAS SQL SIMPLES SIN RETORNO DE DATOS
         public function consultaSimple($sql){
             $this->con->query($sql);
         }
 
+        //CONSULTAS SQL CON RETORNO DE DATOS
         public function consultaRetorno($sql){
             $datos = $this->con->query($sql);
             return $datos;
